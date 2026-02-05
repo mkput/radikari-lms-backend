@@ -339,6 +339,10 @@ export async function getSummary(
 	})
 
 	usedFilters.query.where.AND.push({
+		isArchived: false,
+	})
+
+	usedFilters.query.where.AND.push({
 		OR: [
 			{
 				access: KnowledgeAccess.PUBLIC,
